@@ -3,9 +3,8 @@ package org.example.teachersystem.dto;
 import lombok.Data;
 
 @Data
-public class MarksDTO {
-    private int id;
-    private int studentSubjectId;
+public class TeacherSubjectDTO {
+    private int teacherSubjectId;
     private int teacherId;
-
+    private int subjectId;
 }
