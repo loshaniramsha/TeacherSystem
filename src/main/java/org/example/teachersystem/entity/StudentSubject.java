@@ -6,21 +6,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "teacher_subjrct")
+@Table(name = "student_subject")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class TeacherSubject {
+public class StudentSubject {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int teacherSubjectId;
+    private int id;
 
     @ManyToOne
-    @JoinColumn(name = "teachetId")
-    private Teacher teacher;
+    @JoinColumn(name = "studentId")
+    private Student student;
 
     @ManyToOne
     @JoinColumn(name = "subjectId")
     private Subject subject;
+
+    private String academyYear;
+
+
 }
